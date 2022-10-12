@@ -1,0 +1,44 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <app-navbar></app-navbar>
+
+
+    <table  class="table">
+        <thead >
+            <th scope="col">Id</th>
+            <th scope="col">ToDo</th>
+            <th scope="col">Status</th>
+            <th scope="col">User Id </th>
+            
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of todoData.todos">
+                 
+       
+                <td>{{i.id}}</td>
+                <td>{{i.todo}}</td>
+              
+                <td *ngIf=" i.completed">
+                    <div class="alert alert-success" role="alert"> 
+                        Completed
+                    </div>
+                    <td *ngIf="! i.completed">
+                        <div class="alert alert-danger" role="alert"> 
+                          Not  Completed
+                        </div>
+                </td>
+
+
+                <td>{{i.userId}}</td>
+             
+               
+               
+            
+            </tr>
+        </tbody>
+      </table>
+
+        </div></div></div>
